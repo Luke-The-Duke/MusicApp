@@ -1,0 +1,7 @@
+{
+  "name": "musicEventApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
