@@ -7,10 +7,9 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
-  IonToolbar,
-  IonTitle,
-  IonButton
 } from '@ionic/react';
+
+
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
@@ -36,12 +35,13 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+import Toolbar from './components/Toolbar'
+
+
+
 const App: React.FC = () => (
   <IonApp>
-    <IonToolbar>
-        <IonTitle>Music app name</IonTitle>
-        <IonButton slot="primary">Sign in</IonButton>
-    </IonToolbar>
+    <Toolbar/>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
