@@ -2,21 +2,32 @@
 import './Toolbar.css';
 import SignInPage from '../pages/SignInPage'
 
+import React, { useState } from 'react';
+
 import {
     IonToolbar,
     IonTitle,
     IonButton,
     IonImg,
-    IonItem
+    IonItem,
+    IonSearchbar,
+    IonRow,
   } from '@ionic/react';
 
-const Toolbar: React.FC = () => (
+const Toolbar: React.FC = () => {
+  const [searchText, setSearchText] = useState('');
+  return (
    
       <IonToolbar>
-          <IonImg className="icon" src='assets/icon/MusicHuntIcon.png' />
-          <IonButton routerLink="/signin" className="signInButton" fill="clear" color="light" slot="primary">Sign in</IonButton>
-      </IonToolbar>
- );
+        <IonRow>
+         <IonImg className="icon" src='assets/icon/MusicHuntIcon.png' />
+         <IonSearchbar className="searchBar" value={searchText} onIonChange={e => setSearchText(e.detail.value!)}></IonSearchbar>
+        </IonRow>
+        <IonButton className="signInButton" fill="clear" color="light" slot="primary">Sign in</IonButton>
+      </IonToolbar> 
+      )
+  
+  };
   
   export default Toolbar;
   
