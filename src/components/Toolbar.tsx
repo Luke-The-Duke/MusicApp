@@ -1,5 +1,6 @@
 
 import './Toolbar.css';
+import SignInPage from '../pages/SignInPage'
 
 import {
     IonToolbar,
@@ -13,7 +14,7 @@ const Toolbar: React.FC = () => (
    
       <IonToolbar>
           <IonImg className="icon" src='assets/icon/MusicHuntIcon.png' />
-          <IonButton className="signInButton" fill="clear" color="light" slot="primary">Sign in</IonButton>
+          <IonButton routerLink="/signin" className="signInButton" fill="clear" color="light" slot="primary">Sign in</IonButton>
       </IonToolbar>
  );
   
