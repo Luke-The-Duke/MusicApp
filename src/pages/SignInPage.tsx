@@ -1,18 +1,18 @@
 import "./SignInPage.css"
 
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent,IonItem, IonText, IonHeader, IonPage, IonTitle, IonToolbar, IonInput } from '@ionic/react';
 
+import React, { useState } from 'react';
 
 const SignInPage: React.FC = () => {
+  const [text, setText] = useState<string>();
     return (
-        <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <IonTitle>Home</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonContent className="ion-padding">Hello World djkfjskfjdslk</IonContent>
-      </IonPage>
+        <IonPage className="signup-page-container">
+          <IonContent className="signup-container">  
+            <IonText className="signup-text"><h1>Sign up or log in</h1></IonText>
+            <IonInput type="email" inputmode="email" className="email-input" value={text} placeholder="Enter email" onIonChange={e => setText(e.detail.value!)}></IonInput>
+          </IonContent>
+        </IonPage>
     );
   };
   

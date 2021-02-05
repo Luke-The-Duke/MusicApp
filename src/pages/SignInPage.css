@@ -1,0 +1,27 @@
+.signup-page-container {
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    max-width: 100%;
+}
+
+.signup-container {
+    max-width: 300px; 
+    width:100%; 
+    margin: auto; 
+}
+
+.signup-text {
+    color: black;
+    text-align: center;
+}
+
+.email-input {
+    border: solid darkgray;
+    border-width: 1px 1px;
+    border-radius:5px;
+    height: 40px;
+    text-align: "left";
+    --placeholder-color: gray;
+    --color: black;
+}

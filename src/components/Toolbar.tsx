@@ -18,15 +18,17 @@ const Toolbar: React.FC = () => {
   const [searchText, setSearchText] = useState('');
   return (
    
-      <IonToolbar>
+      <IonToolbar className="toolBar">
         <IonRow>
-         <IonImg className="icon" src='assets/icon/MusicHuntIcon.png' />
-         <IonSearchbar className="searchBar" value={searchText} onIonChange={e => setSearchText(e.detail.value!)}></IonSearchbar>
+          <IonButton className="icon-button" routerLink="/Dashboard"> 
+            <IonImg className="icon" src='assets/icon/MusicHuntIcon.png' /> 
+          </IonButton>    
+          <IonSearchbar className="searchBar" value={searchText} onIonChange={e => setSearchText(e.detail.value!)} />
         </IonRow>
-        <IonButton className="signInButton" fill="clear" color="light" slot="primary">Sign in</IonButton>
+        <IonButton routerLink="/signin" className="signInButton" fill="clear" color="light" slot="primary">Sign in</IonButton>
       </IonToolbar> 
       )
-  
+   
   };
   
   export default Toolbar;
